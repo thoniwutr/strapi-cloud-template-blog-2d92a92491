@@ -10,7 +10,26 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "content-tags": {
+      "fieldName": "Tags",
+      "tags": {
+        "None": {
+          "color": "neutral"
+        },
+        "Done": {
+          "color": "success"
+        },
+        "In progress": {
+          "color": "primary"
+        },
+        "Error": {
+          "color": "danger"
+        }
+      },
+      "defaultTag": "None"
+    }
+  },
   "attributes": {
     "title": {
       "type": "string"
@@ -39,12 +58,6 @@
       "target": "api::author.author",
       "inversedBy": "articles"
     },
-    "category": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::category.category",
-      "inversedBy": "articles"
-    },
     "blocks": {
       "type": "dynamiczone",
       "components": [
@@ -53,6 +66,21 @@
         "shared.rich-text",
         "shared.slider"
       ]
+    },
+    "hashtags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::hashtag.hashtag",
+      "mappedBy": "articles"
+    },
+    "comments": {
+      "type": "string"
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "articles"
     }
   }
 }

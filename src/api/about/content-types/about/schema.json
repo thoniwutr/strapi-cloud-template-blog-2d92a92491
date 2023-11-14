@@ -23,6 +23,9 @@
         "shared.rich-text",
         "shared.slider"
       ]
+    },
+    "Topic": {
+      "type": "string"
     }
   }
 }

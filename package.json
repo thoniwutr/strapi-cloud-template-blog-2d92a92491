@@ -1,13 +1,15 @@
 {
   "dependencies": {
     "@strapi/plugin-graphql": "^4.0.5",
+    "@strapi/plugin-i18n": "4.13.6",
+    "@strapi/plugin-users-permissions": "4.13.6",
+    "@strapi/strapi": "4.13.6",
+    "better-sqlite3": "8.5.0",
     "fs-extra": "^10.0.0",
     "lodash.set": "^4.3.2",
     "mime-types": "^2.1.27",
-    "@strapi/strapi": "4.13.6",
-    "@strapi/plugin-users-permissions": "4.13.6",
-    "@strapi/plugin-i18n": "4.13.6",
-    "better-sqlite3": "8.5.0"
+    "strapi-plugin-comments": "^2.2.15",
+    "strapi-plugin-content-tags": "^1.0.1"
   },
   "name": "my-app-name",
   "private": true,
